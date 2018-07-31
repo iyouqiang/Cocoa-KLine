@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D22268A4210FF2EA0099B5ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D22268A3210FF2EA0099B5ED /* AppDelegate.m */; };
+		D22268A7210FF2EA0099B5ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22268A6210FF2EA0099B5ED /* ViewController.m */; };
+		D22268AA210FF2EA0099B5ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22268A8210FF2EA0099B5ED /* Main.storyboard */; };
+		D22268AC210FF2EC0099B5ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D22268AB210FF2EC0099B5ED /* Assets.xcassets */; };
+		D22268AF210FF2EC0099B5ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22268AD210FF2EC0099B5ED /* LaunchScreen.storyboard */; };
+		D22268B2210FF2EC0099B5ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D22268B1210FF2EC0099B5ED /* main.m */; };
+		D22268BC210FF2EC0099B5ED /* Cocoa_KLineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D22268BB210FF2EC0099B5ED /* Cocoa_KLineTests.m */; };
+		D22268C7210FF2EC0099B5ED /* Cocoa_KLineUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D22268C6210FF2EC0099B5ED /* Cocoa_KLineUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D22268B8210FF2EC0099B5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2226897210FF2EA0099B5ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D222689E210FF2EA0099B5ED;
+			remoteInfo = "Cocoa-KLine";
+		};
+		D22268C3210FF2EC0099B5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2226897210FF2EA0099B5ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D222689E210FF2EA0099B5ED;
+			remoteInfo = "Cocoa-KLine";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D222689F210FF2EA0099B5ED /* Cocoa-KLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cocoa-KLine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D22268A2210FF2EA0099B5ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D22268A3210FF2EA0099B5ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D22268A5210FF2EA0099B5ED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D22268A6210FF2EA0099B5ED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D22268A9210FF2EA0099B5ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D22268AB210FF2EC0099B5ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D22268AE210FF2EC0099B5ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D22268B0210FF2EC0099B5ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D22268B1210FF2EC0099B5ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D22268B7210FF2EC0099B5ED /* Cocoa-KLineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cocoa-KLineTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D22268BB210FF2EC0099B5ED /* Cocoa_KLineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cocoa_KLineTests.m; sourceTree = "<group>"; };
+		D22268BD210FF2EC0099B5ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D22268C2210FF2EC0099B5ED /* Cocoa-KLineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cocoa-KLineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D22268C6210FF2EC0099B5ED /* Cocoa_KLineUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cocoa_KLineUITests.m; sourceTree = "<group>"; };
+		D22268C8210FF2EC0099B5ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D222689C210FF2EA0099B5ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D22268B4210FF2EC0099B5ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D22268BF210FF2EC0099B5ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2226896210FF2EA0099B5ED = {
+			isa = PBXGroup;
+			children = (
+				D22268A1210FF2EA0099B5ED /* Cocoa-KLine */,
+				D22268BA210FF2EC0099B5ED /* Cocoa-KLineTests */,
+				D22268C5210FF2EC0099B5ED /* Cocoa-KLineUITests */,
+				D22268A0210FF2EA0099B5ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D22268A0210FF2EA0099B5ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D222689F210FF2EA0099B5ED /* Cocoa-KLine.app */,
+				D22268B7210FF2EC0099B5ED /* Cocoa-KLineTests.xctest */,
+				D22268C2210FF2EC0099B5ED /* Cocoa-KLineUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D22268A1210FF2EA0099B5ED /* Cocoa-KLine */ = {
+			isa = PBXGroup;
+			children = (
+				D22268A2210FF2EA0099B5ED /* AppDelegate.h */,
+				D22268A3210FF2EA0099B5ED /* AppDelegate.m */,
+				D22268A5210FF2EA0099B5ED /* ViewController.h */,
+				D22268A6210FF2EA0099B5ED /* ViewController.m */,
+				D22268A8210FF2EA0099B5ED /* Main.storyboard */,
+				D22268AB210FF2EC0099B5ED /* Assets.xcassets */,
+				D22268AD210FF2EC0099B5ED /* LaunchScreen.storyboard */,
+				D22268B0210FF2EC0099B5ED /* Info.plist */,
+				D22268B1210FF2EC0099B5ED /* main.m */,
+			);
+			path = "Cocoa-KLine";
+			sourceTree = "<group>";
+		};
+		D22268BA210FF2EC0099B5ED /* Cocoa-KLineTests */ = {
+			isa = PBXGroup;
+			children = (
+				D22268BB210FF2EC0099B5ED /* Cocoa_KLineTests.m */,
+				D22268BD210FF2EC0099B5ED /* Info.plist */,
+			);
+			path = "Cocoa-KLineTests";
+			sourceTree = "<group>";
+		};
+		D22268C5210FF2EC0099B5ED /* Cocoa-KLineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D22268C6210FF2EC0099B5ED /* Cocoa_KLineUITests.m */,
+				D22268C8210FF2EC0099B5ED /* Info.plist */,
+			);
+			path = "Cocoa-KLineUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D222689E210FF2EA0099B5ED /* Cocoa-KLine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D22268CB210FF2EC0099B5ED /* Build configuration list for PBXNativeTarget "Cocoa-KLine" */;
+			buildPhases = (
+				D222689B210FF2EA0099B5ED /* Sources */,
+				D222689C210FF2EA0099B5ED /* Frameworks */,
+				D222689D210FF2EA0099B5ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cocoa-KLine";
+			productName = "Cocoa-KLine";
+			productReference = D222689F210FF2EA0099B5ED /* Cocoa-KLine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D22268B6210FF2EC0099B5ED /* Cocoa-KLineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D22268CE210FF2EC0099B5ED /* Build configuration list for PBXNativeTarget "Cocoa-KLineTests" */;
+			buildPhases = (
+				D22268B3210FF2EC0099B5ED /* Sources */,
+				D22268B4210FF2EC0099B5ED /* Frameworks */,
+				D22268B5210FF2EC0099B5ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D22268B9210FF2EC0099B5ED /* PBXTargetDependency */,
+			);
+			name = "Cocoa-KLineTests";
+			productName = "Cocoa-KLineTests";
+			productReference = D22268B7210FF2EC0099B5ED /* Cocoa-KLineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D22268C1210FF2EC0099B5ED /* Cocoa-KLineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D22268D1210FF2EC0099B5ED /* Build configuration list for PBXNativeTarget "Cocoa-KLineUITests" */;
+			buildPhases = (
+				D22268BE210FF2EC0099B5ED /* Sources */,
+				D22268BF210FF2EC0099B5ED /* Frameworks */,
+				D22268C0210FF2EC0099B5ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D22268C4210FF2EC0099B5ED /* PBXTargetDependency */,
+			);
+			name = "Cocoa-KLineUITests";
+			productName = "Cocoa-KLineUITests";
+			productReference = D22268C2210FF2EC0099B5ED /* Cocoa-KLineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2226897210FF2EA0099B5ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Yochi;
+				TargetAttributes = {
+					D222689E210FF2EA0099B5ED = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					D22268B6210FF2EC0099B5ED = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = D222689E210FF2EA0099B5ED;
+					};
+					D22268C1210FF2EC0099B5ED = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = D222689E210FF2EA0099B5ED;
+					};
+				};
+			};
+			buildConfigurationList = D222689A210FF2EA0099B5ED /* Build configuration list for PBXProject "Cocoa-KLine" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D2226896210FF2EA0099B5ED;
+			productRefGroup = D22268A0210FF2EA0099B5ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D222689E210FF2EA0099B5ED /* Cocoa-KLine */,
+				D22268B6210FF2EC0099B5ED /* Cocoa-KLineTests */,
+				D22268C1210FF2EC0099B5ED /* Cocoa-KLineUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D222689D210FF2EA0099B5ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D22268AF210FF2EC0099B5ED /* LaunchScreen.storyboard in Resources */,
+				D22268AC210FF2EC0099B5ED /* Assets.xcassets in Resources */,
+				D22268AA210FF2EA0099B5ED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D22268B5210FF2EC0099B5ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D22268C0210FF2EC0099B5ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D222689B210FF2EA0099B5ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D22268A7210FF2EA0099B5ED /* ViewController.m in Sources */,
+				D22268B2210FF2EC0099B5ED /* main.m in Sources */,
+				D22268A4210FF2EA0099B5ED /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D22268B3210FF2EC0099B5ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D22268BC210FF2EC0099B5ED /* Cocoa_KLineTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D22268BE210FF2EC0099B5ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D22268C7210FF2EC0099B5ED /* Cocoa_KLineUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D22268B9210FF2EC0099B5ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D222689E210FF2EA0099B5ED /* Cocoa-KLine */;
+			targetProxy = D22268B8210FF2EC0099B5ED /* PBXContainerItemProxy */;
+		};
+		D22268C4210FF2EC0099B5ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D222689E210FF2EA0099B5ED /* Cocoa-KLine */;
+			targetProxy = D22268C3210FF2EC0099B5ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D22268A8210FF2EA0099B5ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D22268A9210FF2EA0099B5ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D22268AD210FF2EC0099B5ED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D22268AE210FF2EC0099B5ED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D22268C9210FF2EC0099B5ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D22268CA210FF2EC0099B5ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D22268CC210FF2EC0099B5ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Q78B6R423;
+				INFOPLIST_FILE = "Cocoa-KLine/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fujiafinancial.Cocoa-KLine";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D22268CD210FF2EC0099B5ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Q78B6R423;
+				INFOPLIST_FILE = "Cocoa-KLine/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fujiafinancial.Cocoa-KLine";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D22268CF210FF2EC0099B5ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Q78B6R423;
+				INFOPLIST_FILE = "Cocoa-KLineTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fujiafinancial.Cocoa-KLineTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cocoa-KLine.app/Cocoa-KLine";
+			};
+			name = Debug;
+		};
+		D22268D0210FF2EC0099B5ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Q78B6R423;
+				INFOPLIST_FILE = "Cocoa-KLineTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fujiafinancial.Cocoa-KLineTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cocoa-KLine.app/Cocoa-KLine";
+			};
+			name = Release;
+		};
+		D22268D2210FF2EC0099B5ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Q78B6R423;
+				INFOPLIST_FILE = "Cocoa-KLineUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fujiafinancial.Cocoa-KLineUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Cocoa-KLine";
+			};
+			name = Debug;
+		};
+		D22268D3210FF2EC0099B5ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Q78B6R423;
+				INFOPLIST_FILE = "Cocoa-KLineUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fujiafinancial.Cocoa-KLineUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Cocoa-KLine";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D222689A210FF2EA0099B5ED /* Build configuration list for PBXProject "Cocoa-KLine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D22268C9210FF2EC0099B5ED /* Debug */,
+				D22268CA210FF2EC0099B5ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D22268CB210FF2EC0099B5ED /* Build configuration list for PBXNativeTarget "Cocoa-KLine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D22268CC210FF2EC0099B5ED /* Debug */,
+				D22268CD210FF2EC0099B5ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D22268CE210FF2EC0099B5ED /* Build configuration list for PBXNativeTarget "Cocoa-KLineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D22268CF210FF2EC0099B5ED /* Debug */,
+				D22268D0210FF2EC0099B5ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D22268D1210FF2EC0099B5ED /* Build configuration list for PBXNativeTarget "Cocoa-KLineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D22268D2210FF2EC0099B5ED /* Debug */,
+				D22268D3210FF2EC0099B5ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2226897210FF2EA0099B5ED /* Project object */;
+}
