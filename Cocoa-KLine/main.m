@@ -1,9 +1,9 @@
-//
+                                                                                                                                                                                                                                                                              //
 //  main.m
 //  Cocoa-KLine
 //
 //  Created by Yochi on 2018/7/31.
-//  Copyright © 2018年 Yochi. All rights reserved.
+//  Copyright © 2018年 Yochi. All ri ghts reserved.
 //
 
 #import <UIKit/UIKit.h>
