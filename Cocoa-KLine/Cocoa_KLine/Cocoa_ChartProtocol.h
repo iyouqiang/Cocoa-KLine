@@ -28,6 +28,14 @@ static inline bool isEqualZero(float value) {
     return fabsf(value) <= 0.00001f;
 }
 
+// 数据精度控制 值 参考值
+static inline NSString* klineValue(double value, NSInteger accuracy) {
+    
+    NSString *string = [NSString stringWithFormat:@"%%.%ldf",accuracy];
+    NSString *accuracystr = [NSString stringWithFormat:string, value];
+    return accuracystr;
+}
+
 /** 所有指标，遵循次协议 */
 @protocol Cocoa_ChartProtocol <NSObject>
 
@@ -55,6 +63,9 @@ static inline bool isEqualZero(float value) {
 @property (nonatomic,assign) NSInteger  displayCount;
 @property (nonatomic,assign) CGFloat    candleWidth;
 @property (nonatomic,assign) CGFloat    candleSpace;
+
+// 清空k线界面数据
+- (void)clearChartView;
 
 // 刷新k线界面
 - (void)refreshChartView;

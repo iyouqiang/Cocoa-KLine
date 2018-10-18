@@ -13,6 +13,7 @@
 
 /** 涨跌幅k线 */
 @property (nonatomic,strong) CAShapeLayer *advancesLayer;
+
 @property (nonatomic,strong) CAShapeLayer *declinesLayer;
 
 @property (nonatomic,strong) NSMutableArray *displayArray;
@@ -43,8 +44,18 @@
     NSInteger count = self.startIndex + self.displayCount <=self.dataArray.count?self.displayCount:self.displayCount -1;
     
     [self.displayArray addObjectsFromArray:[self.dataArray subarrayWithRange:NSMakeRange(self.startIndex,count)]];
-    
+
     [self drawRectVolumeView];
+}
+
+- (void)clearChartView
+{
+    [self.advancesLayer removeFromSuperlayer];
+    self.advancesLayer = nil;
+    [self.declinesLayer removeFromSuperlayer];
+    self.declinesLayer = nil;
+    [self.layer addSublayer:self.advancesLayer];
+    [self.layer addSublayer:self.declinesLayer];
 }
 
 - (void)drawRectVolumeView
@@ -61,7 +72,7 @@
     CGFloat maxVolum = CGFLOAT_MIN;
     CGFloat minVolum = CGFLOAT_MAX;
 
-    for (NSInteger i = 1;i<self.displayArray.count;i++) {
+    for (NSInteger i = 0;i<self.displayArray.count;i++) {
         
         Cocoa_ChartModel *model = [self.displayArray objectAtIndex:i];
         
@@ -70,19 +81,19 @@
     }
     
     self.maxValue = maxVolum;
-    self.minValue = minVolum;
+    self.minValue = 0;
     
     if (self.maxValue - self.minValue < 0.000000005) {
         
         self.maxValue += 0.000000005;
         self.minValue += 0.000000005;
     }
-
-    self.scaleValue = (CGRectGetHeight(self.frame) - self.padding.top - self.padding.bottom) / (maxVolum - minVolum);
     
-    self.coordinateMaxValue =  CGRectGetHeight(self.frame)/self.scaleValue;
+     self.scaleValue = (CGRectGetHeight(self.frame)-self.padding.top - self.padding.bottom) / (maxValue - minValue);
     
     self.coordinateminValue = self.minValue - self.padding.bottom/self.scaleValue;
+    
+    self.coordinateMaxValue =  CGRectGetHeight(self.frame)/self.scaleValue + self.coordinateminValue;
 }
 
 - (void)drawTradingVolumeLayer
@@ -113,7 +124,6 @@
         strongSelf.declinesLayer.path = declinesRef;
     }];
 }
-
 
 #define mark - layz
 

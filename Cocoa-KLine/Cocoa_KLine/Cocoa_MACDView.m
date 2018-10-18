@@ -7,7 +7,7 @@
 //
 
 #import "Cocoa_MACDView.h"
-
+#import "Cocoa_ChartStylesheet.h"
 @interface Cocoa_MACDView ()
 
 @property (nonatomic,strong) NSMutableArray *displayArray;
@@ -60,9 +60,9 @@
     
     self.scaleValue = (CGRectGetHeight(self.frame) - self.padding.top - self.padding.bottom)/(self.maxValue - self.minValue);
     
-    self.coordinateMaxValue = self.minValue - self.padding.bottom/self.scaleValue;
+    self.coordinateminValue = self.minValue - self.padding.bottom/self.scaleValue;
     
-    self.coordinateminValue =  CGRectGetHeight(self.frame)/self.scaleValue + self.coordinateminValue;
+    self.coordinateMaxValue =  CGRectGetHeight(self.frame)/self.scaleValue + self.coordinateminValue;
 }
 
 - (void)drawChartView
@@ -141,7 +141,6 @@
     [self.macdLayer addSublayer:diffLayer];
 }
 
-
 #pragma mark - drawLayer
 - (void)removeFromSubLayer
 {
@@ -178,11 +177,11 @@
     subLayer.path = path.CGPath;
     
     if (macdModel.macd > 0) {
-        subLayer.strokeColor = [UIColor redColor].CGColor;
-        subLayer.fillColor   = [UIColor redColor].CGColor;
+        subLayer.strokeColor = COLOR_RISECOLOR.CGColor;
+        subLayer.fillColor   = COLOR_RISECOLOR.CGColor;
     } else {
-        subLayer.strokeColor = [UIColor greenColor].CGColor;
-        subLayer.fillColor   = [UIColor greenColor].CGColor;
+        subLayer.strokeColor = COLOR_FALLCOLOR.CGColor;
+        subLayer.fillColor   = COLOR_FALLCOLOR.CGColor;
     }
     
     [self.macdLayer addSublayer:subLayer];

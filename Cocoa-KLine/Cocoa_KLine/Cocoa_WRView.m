@@ -69,9 +69,9 @@
     
     self.scaleValue = (CGRectGetHeight(self.frame) - self.padding.top - self.padding.bottom)/(self.maxValue - self.minValue);
     
-    self.coordinateMaxValue = self.minValue - self.padding.bottom/self.scaleValue;
+    self.coordinateminValue = self.minValue - self.padding.bottom/self.scaleValue;
     
-    self.coordinateminValue =  CGRectGetHeight(self.frame)/self.scaleValue + self.coordinateminValue;
+    self.coordinateMaxValue =  CGRectGetHeight(self.frame)/self.scaleValue + self.coordinateminValue;
 }
 
 // 绘制k线

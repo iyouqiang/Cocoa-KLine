@@ -16,6 +16,7 @@
 @property (nonatomic, assign) UIEdgeInsets padding;
 @property (nonatomic, strong) CAShapeLayer *crossLayer;
 @property (nonatomic, strong) Cocoa_ChartModel *chartModel;
+@property (nonatomic, strong) UILabel *suspendDateL;
 
 - (void)drawCrossLineWithPoint:(CGPoint)point inofStr:(NSString *)infoStr chartModel:(Cocoa_ChartModel*)chartModel;
 

@@ -12,9 +12,8 @@
 typedef void(^TecnnicalTypeBlock)(TecnnicalType tecnnicalType);
 
 @interface Cocoa_TecnnicalOptionsView : UIView
-
+@property (nonatomic, strong) NSArray *optionArray;
 @property (nonatomic, assign) TecnnicalType tecnnicalType;
-
 @property (nonatomic, copy) TecnnicalTypeBlock  tecnnicalTypeBlock;
 
 @end

@@ -15,9 +15,11 @@ typedef void(^ChangeCompleteBlock)(id DataInfo);
 
 typedef void(^LoadmoredataBlock)(id DataInfo);
 
+typedef void(^LandscapeSwitchBlock)(void);
+
 @interface Cocoa_ChartManager : UIView
 
-@property (nonatomic, strong) Cocoa_CandleLineView *candleView;
+@property (nonatomic, strong) UIScrollView *mainScrollerView;
 
 /** 是否支持长按手势(默认:支持) **/
 @property (nonatomic, assign) BOOL longPressEnabled;
@@ -28,19 +30,25 @@ typedef void(^LoadmoredataBlock)(id DataInfo);
 /** 是否支持轻拍切换类型手势(默认:支持) **/
 @property (nonatomic, assign) BOOL tapEnabled;
 
-@property (nonatomic, strong) UIActivityIndicatorView *indicatorView;
-
 /** 数据回调 */
 @property (nonatomic, strong) ChangeCompleteBlock changeCompleteBlock;
 
 /** 刷新数据 */
 @property (nonatomic, strong) LoadmoredataBlock loadmoredataBlock;
 
+/** 全屏切换 */ 
+@property (nonatomic, strong) LandscapeSwitchBlock landscapeSwitchBlock;
+
 /** 初始化数据 */
 @property (nonatomic,strong) NSMutableArray<__kindof Cocoa_ChartModel*> *dataArray;
+
+/** 双击 横竖屏切换 */
+- (void)landscapeSwitch;
 
 /** 刷新数据 */
 - (void)refreshChartView;
 
+/** socket追加数据 */
+- (void)appendingChartView;
 
 @end

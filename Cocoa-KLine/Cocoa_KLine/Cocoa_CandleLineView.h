@@ -15,7 +15,7 @@
 /** 当前屏幕范围内显示的k线模型数组 */
 @property (nonatomic,strong) NSMutableArray *currentDisplayArray;
 @property (nonatomic,assign) NSInteger displayCount;
-
+@property (nonatomic, assign) BOOL socketFlag;
 /** 均线宽度(默认:1.0) **/
 @property (nonatomic, assign) CGFloat avgLineWidth;
 
@@ -28,6 +28,9 @@
 
 /** 最大宽度(默认:10.0) **/
 @property (nonatomic, assign) CGFloat maxCandleWidth;
+
+@property (nonatomic, assign) CGFloat maxHighValue;
+@property (nonatomic, assign) CGFloat minlowValue;
 
 /** 最小K线宽度(默认:1.0) **/
 @property (nonatomic, assign) CGFloat minCandleWidth;
@@ -49,6 +52,8 @@
 - (void)pinGesture:(UIPinchGestureRecognizer *)pin;
 
 - (void)refreshChartView;
+
+- (void)clearChartView;
 
 - (void)removeAllObserver;
 

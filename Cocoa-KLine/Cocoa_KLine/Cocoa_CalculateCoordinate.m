@@ -16,6 +16,8 @@ void computeMAData(NSArray *items,int period)
     // 获取收盘价格
     NSMutableArray *arrCls = [[NSMutableArray alloc] init];
     for (NSUInteger index = 0; index < items.count; index++) {
+        //Cocoa_ChartModel *item = [items objectAtIndex:items.count - 1 - index];
+        
         Cocoa_ChartModel *item = [items objectAtIndex:items.count - 1 - index];
         [arrCls addObject:[NSString stringWithFormat:@"%0.8f",item.close]];
     }
@@ -40,12 +42,13 @@ void computeMAData(NSArray *items,int period)
     if (TA_SUCCESS == ta_retCode) {
         
         NSArray *arr = MDCArrayToNSArray(outReal, (int) items.count, outBegIdx, outNBElement, items);
-
-        for (NSInteger index = 0; index < arrCls.count; index++) {
+        
+        for (NSInteger index = 0; index < arr.count; index++) {
             
             Cocoa_ChartModel *item = [items objectAtIndex:items.count - 1 - index];
-            
+
             if (period == 5) {
+                
                 item.ma5 = [arr[index] doubleValue];
             }
             
@@ -53,9 +56,39 @@ void computeMAData(NSArray *items,int period)
                 item.ma10 = [arr[index] doubleValue];
             }
             
-            if (period == 20) {
+            if (period == 30) {
                 item.ma20 = [arr[index] doubleValue];
             }
+            
+//            if (period == 5) {
+//
+//                if (period-1 + index < items.count) {
+//
+//                    item.ma5 = [arr[period-1 + index] doubleValue];
+//
+//                }else {
+//
+//                    item.ma5 = [arr[arr.count-index-1] doubleValue];
+//                }
+//            }
+//
+//            if (period == 10) {
+//                if (period-1 + index < items.count) {
+//
+//                    item.ma10 = [arr[period-1 + index] doubleValue];
+//                }else {
+//                    item.ma10 = [arr[arr.count-index-1] doubleValue];
+//                }
+//            }
+//
+//            if (period == 30) {
+//                if (period-1 + index < items.count) {
+//
+//                    item.ma20 = [arr[period-1 + index] doubleValue];
+//                }else {
+//                    item.ma20 = [arr[arr.count-index-1] doubleValue];
+//                }
+//            }
         }
     }
 }
@@ -281,6 +314,7 @@ NSMutableArray *computeWRData(NSArray *items,int period)
         for (NSInteger index = 0; index < arrCls.count; index++) {
             Cocoa_ChartModel *item = [items objectAtIndex:items.count - 1 - index];
             item.WRValue = outReal[index - outBegIdx];
+            
         }
     }
     
@@ -415,29 +449,35 @@ NSArray *MDCArrayToNSArray(const double inCArray[], int length, int outBegIdx, i
         return nil;
     }
     NSMutableArray *outNSArray = [[NSMutableArray alloc] initWithCapacity:length];
+    
     for (NSInteger index = 0; index < length; index++) {
         if (index >= outBegIdx && index < outBegIdx + outNBElement) {
-            
             [outNSArray addObject:[NSString stringWithFormat:@"%0.8f", inCArray[index - outBegIdx]]];
-        } else {
-            //  当前天数
-            NSUInteger nowIndex = length - index - 1;
-            //  当前蜡烛图数据
-            Cocoa_ChartModel *item = items[nowIndex];
-            //  添加5,10,20均线下md5数据
-            if (index == 0) {
-                [outNSArray addObject:[NSString stringWithFormat:@"%.8f",item.close]];
-            }
-            else{
-                [outNSArray addObject:[NSString stringWithFormat:@"%.8f",customComputeMA(items, index + 1)]];
-            }
         }
+//        else {
+//            //  当前天数
+//            NSUInteger nowIndex = length - index - 1;
+//            //  当前蜡烛图数据
+//            Cocoa_ChartModel *item = items[nowIndex];
+//            //  添加5,10,20均线下md5数据
+//            if (index == 0) {
+//
+//                [outNSArray addObject:[NSString stringWithFormat:@"%.8f",item.close]];
+//            }
+//            else{
+//
+//                [outNSArray addObject:[NSString stringWithFormat:@"%.8f",customComputeMA(items, index + 1)]];
+//            }
+//        }
     }
+    
     return outNSArray;
 }
 
 CGFloat customComputeMA(NSArray *items, NSInteger days)
 {
+    NSLog(@"天数：%ld", days);
+    
     CGFloat totalPrice = 0.0;
     for (int i = 0; i < days; i ++ ) {
         Cocoa_ChartModel *item = items[items.count - i - 1];

@@ -17,6 +17,57 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = COLOR_BACKGROUND;
+    
+    _chartManager.frame = CGRectMake(0, 40, kSCREENHEIGHT, kSCREENWIDTH-40);
+    [self.view addSubview:_chartManager];
+    
+    [_chartManager landscapeSwitch];
+    
+    __weak typeof(self) weakSelf = self;
+    _chartManager.landscapeSwitchBlock = ^{
+        __strong typeof(self) self = weakSelf;
+        
+        [self clickAction];
+    };
+}
+
+- (void)clickAction
+{
+    __weak typeof(self) weakSelf = self;
+    [self dismissViewControllerAnimated:NO completion:^{
+
+        __strong typeof(self) self = weakSelf;
+        self.chartManager.frame = CGRectMake(0, 60, kSCREENWIDTH, kSCREENWIDTH-60);
+        
+        [self.chartManager landscapeSwitch];
+        [self.chartsuperView addSubview:self.chartManager];
+        
+    }];
+}
+
+- (BOOL)shouldAutorotate{
+    return NO;
+}
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationLandscapeRight | UIInterfaceOrientationMaskLandscapeLeft;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return  UIDeviceOrientationLandscapeRight | UIInterfaceOrientationLandscapeLeft;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return NO;
+}
+
+- (UIStatusBarAnimation)preferredStatusBarUpdateAnimation {
+    return UIStatusBarAnimationNone;
 }
 
 - (void)didReceiveMemoryWarning {

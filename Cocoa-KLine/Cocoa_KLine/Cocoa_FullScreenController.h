@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Cocoa_KLine.h"
+
 
 @interface Cocoa_FullScreenController : UIViewController
+
+@property (nonatomic, strong) UIView *chartsuperView;
+
+@property (nonatomic, weak) Cocoa_ChartManager *chartManager;
 
 @end

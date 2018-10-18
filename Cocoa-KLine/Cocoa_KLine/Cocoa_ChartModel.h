@@ -25,6 +25,23 @@
 @property (nonatomic, assign) double high;
 // 最低价
 @property (nonatomic, assign) double low;
+
+/** 字符串显示 */
+// 成交量
+@property (nonatomic, strong) NSString *volumeStr;
+// 开盘价
+@property (nonatomic, strong) NSString *openStr;
+// 收盘价
+@property (nonatomic, strong) NSString *closeStr;
+// 最高价
+@property (nonatomic, strong) NSString *highStr;
+// 最低价
+@property (nonatomic, strong) NSString *lowStr;
+
+// 小数位精度 主要用于数据展示 最长八位
+@property (nonatomic, assign) NSInteger priceaccuracy;
+@property (nonatomic, assign) NSInteger volumaccuracy;
+
 // 日期时间
 @property (nonatomic, copy) NSString *date;
 
@@ -65,6 +82,8 @@
 
 /** 10日成交量均线 */
 @property (nonatomic, assign) CGFloat ma10Volume;
+
+@property (nonatomic, assign) CGFloat priceChangeRatio;
 
 /********************MACD值******************************/
 @property(assign, nonatomic) CGFloat dea;

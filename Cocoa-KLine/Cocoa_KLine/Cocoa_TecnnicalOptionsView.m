@@ -10,7 +10,6 @@
 #import "Cocoa_ChartStylesheet.h"
 @interface Cocoa_TecnnicalOptionsView ()
 
-@property (nonatomic, strong) NSArray *optionArray;
 @property (nonatomic, strong) UIButton *lastBtn;
 
 @end
@@ -45,8 +44,8 @@
             button.frame = CGRectMake(gap + idx*(gap + btnWidth), 0, btnWidth, CGRectGetHeight(self.frame));
             [button setTitle:self->_optionArray[idx] forState:UIControlStateNormal];
             button.titleLabel.font = [UIFont systemFontOfSize:14];
-            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-            [button setTitleColor:COLOR_HIGHLIGHT forState:UIControlStateSelected];
+            [button setTitleColor:COLOR_COORDINATETEXT forState:UIControlStateNormal];
+            [button setTitleColor:COLOR_WARNINTEXT forState:UIControlStateSelected];
             [button addTarget:self action:@selector(changeTecnnicalView:) forControlEvents:UIControlEventTouchUpInside];
             [self addSubview:button];
             
